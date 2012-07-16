@@ -1,0 +1,246 @@
+/* -----------------------------------------------------------
+
+	Project:		PROJECT NAME
+	Version:		1.0
+	Created:		CREATION DATE
+	Modified:
+	
+		[Table of contents]
+		1. Reset
+		2. Typography
+			2.1	Headings
+			2.2	Text elements
+			2.3	Lists
+			2.4	Tables
+			2.5	Forms
+		3. Structure
+			3.1	Header
+			3.2	Navigation
+			3.3	Content
+			3.4	Footer
+			3.5	Media queries
+		4. Clear floats
+	
+----------------------------------------------------------- */
+
+/* -----------------------------------------------------------
+
+	RESET
+	
+----------------------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section { display: block; }
+
+nav ul 		{ list-style: none; margin: 0; padding: 0; }
+nav ul li	{ display: inline; }
+
+blockquote, q 		{ quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after 	{ content: ''; content: none; }
+
+a 		{ margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+ins 	{ background-color: #ff9; color: #000; text-decoration: none; }
+mark 	{ background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del 	{ text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted #000; cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table 			{ border-collapse: collapse; border-spacing: 0; }
+hr 				{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select 	{ vertical-align: middle; }
+
+
+
+/* -----------------------------------------------------------
+
+	TYPOGRAPHY
+	
+----------------------------------------------------------- */
+body	{ font-size: 75%; color: #000; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
+
+
+/* HEADINGS
+-------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6	{ font-weight: normal; color: #000; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-rendering: optimizeLegibility; }
+
+h1					{ font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2					{ font-size: 2em; margin-bottom: 0.75em; }
+h3					{ font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4					{ font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; height: 1.25em; }
+h5					{ font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6					{ font-size: 1em; font-weight: bold; }
+
+
+/* TEXT ELEMENTS
+-------------------------------------------------------------- */
+p			{ margin: 0 0 1.5em; }
+
+a:hover, a:active 		{ outline: none; }
+a, a:active, a:visited 	{  }
+a:hover 				{  }
+
+blockquote	{  }
+strong		{ font-weight: bold; }
+em,dfn		{ font-style: italic; }
+dfn			{ font-weight: bold; }
+sup, sub	{ line-height: 0; }
+
+abbr, 
+acronym		{  }
+address		{  }
+del			{  }
+
+pre,code	{ white-space: pre; }
+pre,code,tt {  }
+pre 		{ white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+
+
+/* LISTS
+-------------------------------------------------------------- */
+li ul, 
+li ol		{ margin: 0 1.5em; }
+ul, ol		{ margin: 0 1.5em 1.5em 1.5em; }
+
+ul			{ list-style-type: disc; }
+ol			{ list-style-type: decimal; }
+
+dl			{ margin: 0 0 1.5em 0; }
+dl dt		{ font-weight: bold; }
+dd			{ margin-left: 1.5em;}
+
+
+/* TABLES
+-------------------------------------------------------------- */
+table		{ width: 100%; }
+th			{  }
+th,td		{  }
+tr.even td	{  }
+tfoot		{  }
+caption		{  }
+
+
+/* FORMS
+-------------------------------------------------------------- */
+/* align checkboxes, radios, text inputs with their label */
+input[type="radio"] 	{ vertical-align: text-bottom; }
+input[type="checkbox"] 	{ vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input 				{ vertical-align: text-bottom; }
+
+label, input[type=button], input[type=submit], button { cursor: pointer; -webkit-appearance: none; }
+
+label		{ font-weight: bold; }
+
+fieldset	{  }
+legend		{ font-weight: bold; }
+
+input.text, input.title		{  }
+input.text, input.title		{  }
+input.text:focus,
+input.title:focus			{  }
+input.title					{  }
+
+textarea			{  }
+textarea			{  }
+textarea:focus		{  }
+
+select				{  }
+select:focus		{  }
+
+
+
+/* -----------------------------------------------------------
+
+	STRUCTURE
+	
+----------------------------------------------------------- */
+/* Setting the box-model to elements having defined width and height, regardless of padding and borders. DOES NOT work on IE7! */
+* 				{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html			{ height: 100%; overflow-y: scroll; }
+body 			{ height: 100%; background: #fff; text-align: center; }
+#page 			{ min-height: 100%; _height: 100%; width: 960px; position: relative; margin: auto; background: #fff; text-align: left; }
+
+header.global			{  }
+#content				{ padding-bottom: 24px /* THIS NEEDS TO BE THE SAME AS THE HEIGHT OF THE FOOTER */; }
+footer.global			{ position: absolute; bottom: 0; width: 100%; height: 24px; line-height: 24px; text-align: center; z-index: 5; clear: both; }
+
+
+
+/* HEADER
+-------------------------------------------------------------- */
+
+
+
+/* NAVIGATION
+-------------------------------------------------------------- */
+
+
+
+/* CONTENT
+-------------------------------------------------------------- */
+
+
+
+/* FOOTER
+-------------------------------------------------------------- */
+footer p	{ margin: 0; }
+
+
+
+/* MEDIA QUERIES
+-------------------------------------------------------------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	/* Smartphones (portrait and landscape) */
+}
+
+@media only screen and (min-width : 321px) {
+	/* Smartphones (landscape) */
+}
+
+@media only screen and (max-width : 320px) {
+	/* Smartphones (portrait) */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	/* iPads (portrait and landscape) */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	/* iPads (landscape) */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	/* iPads (portrait) */
+}
+
+@media only screen and (min-width : 1224px) {
+	/* Desktops and laptops */
+}
+
+@media only screen and (min-width : 1824px) {
+	/* Large screens */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	/* iPhone 4 and high pixel ratio devices */
+}
+
+
+
+/* -----------------------------------------------------------
+
+	CLEAR FLOATS
+	
+----------------------------------------------------------- */
+.clear: 		{ display: inline-block; }
+.clear:after 	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .clear 	{ height: 1%; }
+.clear 			{ display: block; }
