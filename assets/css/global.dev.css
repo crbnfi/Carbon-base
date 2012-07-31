@@ -10,9 +10,10 @@
 		2. Typography
 			2.1	Headings
 			2.2	Text elements
-			2.3	Lists
-			2.4	Tables
-			2.5	Forms
+			2.3	Buttons
+			2.4	Lists
+			2.5	Tables
+			2.6	Forms
 		3. Structure
 			3.1	Header
 			3.2	Navigation
@@ -22,6 +23,7 @@
 		4. Clear floats
 	
 ----------------------------------------------------------- */
+
 
 /* -----------------------------------------------------------
 
@@ -60,12 +62,15 @@ input, select 	{ vertical-align: middle; }
 
 
 
+
+
 /* -----------------------------------------------------------
 
 	TYPOGRAPHY
 	
 ----------------------------------------------------------- */
 body	{ font-size: 75%; color: #000; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
+
 
 
 /* HEADINGS
@@ -78,6 +83,7 @@ h3					{ font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
 h4					{ font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; height: 1.25em; }
 h5					{ font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
 h6					{ font-size: 1em; font-weight: bold; }
+
 
 
 /* TEXT ELEMENTS
@@ -104,6 +110,14 @@ pre,code,tt {  }
 pre 		{ white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
 
 
+
+/* BUTTONS
+-------------------------------------------------------------- */
+.btn					{  }
+.btn:hover				{  }
+
+
+
 /* LISTS
 -------------------------------------------------------------- */
 li ul, 
@@ -118,6 +132,7 @@ dl dt		{ font-weight: bold; }
 dd			{ margin-left: 1.5em;}
 
 
+
 /* TABLES
 -------------------------------------------------------------- */
 table		{ width: 100%; }
@@ -126,6 +141,7 @@ th,td		{  }
 tr.even td	{  }
 tfoot		{  }
 caption		{  }
+
 
 
 /* FORMS
@@ -142,11 +158,7 @@ label		{ font-weight: bold; }
 fieldset	{  }
 legend		{ font-weight: bold; }
 
-input.text, input.title		{  }
-input.text, input.title		{  }
-input.text:focus,
-input.title:focus			{  }
-input.title					{  }
+input				{  }
 
 textarea			{  }
 textarea			{  }
@@ -154,6 +166,8 @@ textarea:focus		{  }
 
 select				{  }
 select:focus		{  }
+
+
 
 
 
@@ -232,6 +246,8 @@ footer p	{ margin: 0; }
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 	/* iPhone 4 and high pixel ratio devices */
 }
+
+
 
 
 
