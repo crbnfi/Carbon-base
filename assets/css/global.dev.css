@@ -69,7 +69,7 @@ input, select 	{ vertical-align: middle; }
 	TYPOGRAPHY
 
 ----------------------------------------------------------- */
-body	{ font-size: 75%; color: #000; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; }
+body	{ font-size: 75%; color: #000; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 
 
