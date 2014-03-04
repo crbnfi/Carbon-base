@@ -198,6 +198,21 @@ footer.global			{ position: absolute; bottom: 0; width: 100%; height: 24px; line
 
 /* NAVIGATION
 -------------------------------------------------------------- */
+/*
+	Justified and vertically centered header element
+	http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/ 
+*/
+header.global 					{ text-align: justify; height: 80px; }
+header.global:after				{ content: ''; display: inline-block; width: 100%; }
+ 
+header.global > div,
+header.global > div:before,
+header.global nav,
+header.global > div h1			{ display: inline-block; vertical-align: middle; text-align: left; margin: 0; }
+header.global > div 			{ height: 100%; }
+header.global > div::before		{ content: ''; height: 100%; }
+header.global nav a 			{ padding: 0 1em; white-space: nowrap; }
+header.global nav a:last-child	{ padding-right: 0; }
 
 
 
@@ -272,3 +287,16 @@ footer p	{ margin: 0; }
 .clear:after 	{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 * html .clear 	{ height: 1%; }
 .clear 			{ display: block; }
+
+
+
+/* -----------------------------------------------------------
+
+	60fps scrolling
+	http://www.thecssninja.com/javascript/pointer-events-60fps
+
+----------------------------------------------------------- */
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important;
+}
