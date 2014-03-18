@@ -99,3 +99,14 @@ window.addEventListener('scroll', function () {
 		body.classList.remove('disable-hover');
 	}, 250);
 }, false);
+
+// Animate scrollto element
+// To use: add class="scrollto" to an element and then define the scrolled target
+// with data-attr data-scrollto="#element-id"
+// Example: <div class="scrollto" data-scrollto="#content"></div>
+$('.scrollto').click(function(e){
+	e.preventDefault();
+	$('html,body').animate({
+		scrollTop: $($(this).data('scrollto')).offset().top + 'px'
+	}, 800)
+})
