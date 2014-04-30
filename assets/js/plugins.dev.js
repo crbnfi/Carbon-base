@@ -100,6 +100,8 @@ window.addEventListener('scroll', function () {
 	}, 250);
 }, false);
 
+
+
 // Animate scrollto element
 // To use: add class="scrollto" to an element and then define the scrolled target
 // with data-attr data-scrollto="#element-id"
@@ -110,3 +112,23 @@ $('.scrollto').click(function(e){
 		scrollTop: $($(this).data('scrollto')).offset().top + 'px'
 	}, 800)
 })
+
+
+
+// Open share buttons in a popup
+$('.share-popup-button').click(function(event) {
+	var width  = 760,
+		height = 400,
+		left   = ($(window).width()  - width)  / 2,
+		top    = ($(window).height() - height) / 2,
+		url    = this.href,
+		opts   = 'status=1' +
+				 ',width='  + width  +
+				 ',height=' + height +
+				 ',top='    + top    +
+				 ',left='   + left;
+
+	window.open(url, 'twitter', opts);
+
+	return false;
+});
